@@ -1,0 +1,19 @@
+{
+  "verbose": false,
+  "delay": 0,
+  "prof": false,
+  "ignore": [
+    "build",
+    "**/*.spec.ts",
+    "test/eslint-test.ts"
+  ],
+  "watch": [
+    "src",
+    "nodemon.json",
+    ".env"
+  ],
+  "ext": "ts",
+  "execMap": {
+    "ts": "ts-node"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "name": "surfing_backend",
+  "version": "0.2.1",
+  "description": "Surfing Backend",
+  "engines": {
+    "node": "16 || 18 || 20"
+  },
+  "target": {
+    "node": "18"
+  },
+  "source": [
+    "./src/main.ts"
+  ],
+  "scripts": {
+    "serve": "npx nodemon src/main.ts --local",
+    "start:local": "node dist/main.js --local",
+    "start": "node dist/main.js",
+    "audit": "yarn audit --level low --groups dependencies",
+    "lint": "npx eslint . --ext .ts",
+    "test": "jest --coverage --config jest.config.ts",
+    "test:watch": "jest --watch --config jest.config.ts",
+    "test:ci": "jest --coverage --config jest.config-ci.ts",
+    "build": "npx parcel build --dist-dir dist --no-optimize --log-level info",
+    "build:watch": "npx parcel watch --dist-dir dist --log-level info"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RandiyaFer/Sea-Surfing-Planner.git"
+  },
+  "author": "Pamindu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RandiyaFer/Sea-Surfing-Planner/issues"
+  },
+  "homepage": "https://github.com/RandiyaFer/Sea-Surfing-Planner#readme",
+  "dependencies": {
+    "applicationinsights": "^3.1.0",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.19.2",
+    "generic-pool": "^3.9.0",
+    "jsonwebtoken": "^9.0.2",
+    "minimist": "^1.2.8",
+    "mssql": "^10.0.2",
+    "tedious": "^18.2.0",
+    "tedious-connection-pool2": "^2.1.0",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/body-parser": "^1.19.5",
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/minimist": "^1.2.5",
+    "@types/mssql": "^9.1.5",
+    "@types/node": "^20.12.12",
+    "@types/tedious": "^4.0.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
