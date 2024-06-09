@@ -12,6 +12,9 @@ import { EmailVerifiedHandler } from './concreteHandlers/emailVerifiedHandler';
 
 
 export class UserSignUpValidationHandler implements ValidationHandler<User> {
+  static handle(user: string | import("jsonwebtoken").JwtPayload): string | PromiseLike<string> {
+    throw new Error('Method not implemented.');
+  }
   readonly context: Context;
 
   constructor(context: Context) {

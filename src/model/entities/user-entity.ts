@@ -1,12 +1,9 @@
-import { BaseEntity } from './base-entity';
-
-export interface User  extends BaseEntity {
+export interface User {
     id: number;
-    userName: string;
+    name: string;
     email: string;
-    phoneNumber1: string;
-    phoneNumber2: string;
+    phoneNumber: string;
+    password: string;
     phoneVerified:number;
     emailVerified:number;
-    password: string;
 }

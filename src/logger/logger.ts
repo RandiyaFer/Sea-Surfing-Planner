@@ -1,13 +1,13 @@
 import { createLogger, format, transports, add } from 'winston';
 import * as appInsights from 'applicationinsights';
-import { Config } from '../config';
+import { db } from '../config/dbconfig';
 
 const { combine, timestamp } = format;
 
-export function loggerFactory(config: Config) {
+export function loggerFactory(db: Db) {
   return createLogger({
     defaultMeta: {
-      component: 'surfing_backend'
+      component: 'surfy_backend'
     },
     format: combine(
       timestamp({
@@ -16,7 +16,7 @@ export function loggerFactory(config: Config) {
     ),
     transports: [
       new transports.Console({
-        level: config.settings.logLevel,
+        // level: config.settings.logLevel,
         format: format.simple(),
         debugStdout: true,
       })

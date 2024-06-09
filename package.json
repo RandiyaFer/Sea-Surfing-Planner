@@ -12,7 +12,7 @@
     "./src/main.ts"
   ],
   "scripts": {
-    "serve": "npx nodemon src/main.ts --local",
+    "serve": "npx nodemon src/app.ts --local",
     "start:local": "node dist/main.js --local",
     "start": "node dist/main.js",
     "audit": "yarn audit --level low --groups dependencies",
@@ -45,7 +45,7 @@
     "jsonwebtoken": "^9.0.2",
     "minimist": "^1.2.8",
     "mssql": "^10.0.2",
-    "tedious": "^18.2.0",
+    "mysql2": "^3.10.0",
     "tedious-connection-pool2": "^2.1.0",
     "winston": "^3.13.0"
   },
@@ -59,7 +59,7 @@
     "@types/minimist": "^1.2.5",
     "@types/mssql": "^9.1.5",
     "@types/node": "^20.12.12",
-    "@types/tedious": "^4.0.14",
+    "@types/tedious": "^4.0.12",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   }
